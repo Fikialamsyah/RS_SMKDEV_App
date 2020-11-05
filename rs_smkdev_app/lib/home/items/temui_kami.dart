@@ -8,6 +8,7 @@ class TemuiKami extends StatefulWidget {
 }
 
 class _TemuiKamiState extends State<TemuiKami> {
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -16,9 +17,9 @@ class _TemuiKamiState extends State<TemuiKami> {
         GestureDetector(
           onTap: () {},
           child: Container(
-            margin: EdgeInsets.only(top: 20, bottom: 5),
-            width: 320,
-            height: 150,
+            margin: EdgeInsets.only(left: 20, right: 20, top: 20, bottom: 5),
+            width: 400,
+            height: 200,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 color: Colors.grey
@@ -46,20 +47,23 @@ class _ScheduleState extends State<Schedule> {
       alignment: Alignment.topLeft,
       child: Column(
         children: <Widget>[
-          Text(
-            "Rumah Sakit SMKDEV",
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold
-            ),
-          ),
-          Text(
-              "Jl. Margacinta Np.29\n"
-                  "Senin - Jumat : 08.00 - 20.00\n"
-                  "Sabtu : 08 - 17.00"
-          ),
+          Text('Rumah Sakit SMKDEV', style: Theme.of(context).textTheme.headline6.copyWith(
+            fontWeight: FontWeight.bold
+          )),
+          Text('Jl. Margacinta No.29\nSenin - Jumat: 08.00 - 20.00\nSabtu : 08.00 - 17.00'),
+          SizedBox(height: 20,),
+           Text('Rumah Sakit SMKDEV', style: Theme.of(context).textTheme.headline6.copyWith(
+            fontWeight: FontWeight.bold
+          )),
+          Text('Jl. Margacinta No.29\nSenin - Jumat: 08.00 - 20.00\nSabtu : 08.00 - 17.00'),
+          SizedBox(height: 20,),
+           Text('Rumah Sakit SMKDEV', style: Theme.of(context).textTheme.headline6.copyWith(
+            fontWeight: FontWeight.bold
+          )),
+          Text('Jl. Margacinta No.29\nSenin - Jumat: 08.00 - 20.00\nSabtu : 08.00 - 17.00'),
           SizedBox(height: 20,),
         ],
       ),
     );
   }
 }
-
