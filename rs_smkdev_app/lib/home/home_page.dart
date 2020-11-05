@@ -26,7 +26,8 @@ class _HomePageState extends State<HomePage> {
             SizedBox(height: 30,),
             BeritaBaru(),
             SizedBox(height: 30,),
-            Kontak()
+            Kontak(),
+            SizedBox(height: 30)
           ],
         ),
       ),
