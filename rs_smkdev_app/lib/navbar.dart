@@ -9,6 +9,7 @@ class Navbar extends StatefulWidget {
 
 class _NavbarState extends State<Navbar> {
   int _selectedIndex = 0;
+  //widget ini digunakan untuk tujuan dari navigasi bar ketika di klik
   final _widgetOptions = <Widget>[
     HomePage(),
     Text('Page Layanan'),
@@ -33,6 +34,7 @@ class _NavbarState extends State<Navbar> {
         height: 70,
         child: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
+            //Kumpulan item ini akan ditampilkan sebagai button dalam bar navigasi
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.home_outlined,
@@ -67,7 +69,7 @@ class _NavbarState extends State<Navbar> {
           selectedItemColor: Colors.blue,
           showUnselectedLabels: true,
           unselectedItemColor: Colors.grey,
-          currentIndex: _selectedIndex,
+          currentIndex: _selectedIndex, //digunakan untuk menselect menu yang dipilih sesuai index widget
           onTap: _onItemTapped,
         ),
       ),
