@@ -1,50 +1,45 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-class ImgSlider extends StatelessWidget {
-  const ImgSlider({
-    Key key,
-  }) : super(key: key);
+class ImgSlider extends StatefulWidget {
+  @override
+  _ImgSliderState createState() => _ImgSliderState();
+}
+
+class _ImgSliderState extends State<ImgSlider> {
+
+  //add auto image slider
+  static final List<String> imgSlider = [
+    'orange.jpeg',
+    'blue.jpeg',
+    'purple.jpeg'
+  ];
+  final CarouselSlider autoPlayImage = CarouselSlider(
+    items: imgSlider.map((fileImage) {
+      return Container(
+        margin: EdgeInsets.all(5.0),
+        child: ClipRRect(
+          child: Image.asset(
+            'images/${fileImage}',
+            width: 10000,
+            fit: BoxFit.cover,
+          ),
+        ),
+      );
+    }).toList(),
+    height: 300,
+    autoPlay: true,
+    enlargeCenterPage: true,
+    aspectRatio: 2.0,
+  );
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 300,
-      padding: EdgeInsets.only(left: 20, right: 20),
-      alignment: Alignment.topCenter,
-      decoration: BoxDecoration(color: Colors.grey),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
-          SizedBox(
-            height: 30,
-          ),
-          Text(
-            'Sekilas Tentang\nRS. SMKDEV',
-            style: Theme.of(context).textTheme.headline4.copyWith(
-                color: Colors.white, fontWeight: FontWeight.bold),
-          ),
-          Text(
-            'SMKDEV komunitas developer siswa SMK jurusan\n'
-                'Rekayasa Perangkat Lunak (RPL), Teknik Komputer\n'
-                'dan Jaringan (TKJ) dan Multimedia (MM) dari\n'
-                'seluruh Indonesia',
-            style: TextStyle(color: Colors.white),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Text(
-                'bar',
-                style: TextStyle(color: Colors.white),
-              ),
-              Text(
-                'Read',
-                style: TextStyle(color: Colors.white),
-              ),
-            ],
-          )
-        ],
-      ),
+    return Column(
+      children: <Widget>[
+        autoPlayImage,
+
+      ],
     );
   }
 }
