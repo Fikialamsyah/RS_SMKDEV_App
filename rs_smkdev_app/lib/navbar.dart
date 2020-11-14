@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rs_smkdev_app/profile/profile_page.dart';
 
 import 'home/home_page.dart';
 
@@ -13,8 +14,8 @@ class _NavbarState extends State<Navbar> {
   final _widgetOptions = <Widget>[
     HomePage(),
     Text('Page Layanan'),
-    Text('Page Booking'),
     Text('Page Profile'),
+    ProfilePage(),
     Text('Page More')
   ];
 
