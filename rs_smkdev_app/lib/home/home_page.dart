@@ -5,7 +5,6 @@ import 'package:rs_smkdev_app/home/items/kontak.dart';
 import 'package:rs_smkdev_app/home/items/temui_kami.dart';
 import 'items/image_slider.dart';
 import 'items/tentang_kami.dart';
-import 'items/title_menu.dart';
 
 class HomePage extends StatefulWidget {
   @override
