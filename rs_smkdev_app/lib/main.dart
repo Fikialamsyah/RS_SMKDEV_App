@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
         //         // is not restarted.
         primarySwatch: Colors.blue,
       ),
+      //Menampilkan navigationbar bottom (navbar.dart)
       home: Navbar()
     );
   }
